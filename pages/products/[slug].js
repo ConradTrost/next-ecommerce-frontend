@@ -42,8 +42,8 @@ export async function getStaticPaths() {
     
     // Return to next.js context
     return {
-        paths: products.map(product => ({
-            params: { slug: String(product.slug) }
+        paths: products.map(el => ({
+            params: { slug: String(el.slug) }
         })),
         fallback: false // Shows 404 if params don't match
     }
